@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function suma(a,b){
+                return a+b 
+            }
+
+            function resta(a,b){
+                return a-b 
+            }
+
+            function division(a,b){
+                return a/b 
+            }
+
+            function multiplicacion(a,b){
+                return a*b
+            }
+
+            function Calculadora(a,b,opcion){
+                switch(opcion){
+                    case "1" :
+                        return suma(a,b);
+                    case "2" :
+                        return resta(a,b);
+                    case "3" :
+                        return division(a,b);
+                    case "4" :
+                        return multiplicacion(a,b);
+                    default:
+                        console.log("ERROR: Ingresa una opcion correcta!");    
+                }
+            }
+            console.log("--------------CALCULADORA--------------");
+            console.log("1. SUMA");
+            console.log("2. RESTA");
+            console.log("3. DIVISION");
+            console.log("4. MULTIPLICACION");
+            let opcion = prompt("Ingresa una el numero de la operacion que quieras utilizar: ");
+            let a = parseInt(prompt("Ingresa el primer numero: "));
+            let b = parseInt(prompt("Ingresa el segundo numero: "));
+            let resultado = Calculadora(a,b,opcion);
+            console.log("El Resultado es: ", resultado);
+
+
+    </script>    
+</body>
+</html>
